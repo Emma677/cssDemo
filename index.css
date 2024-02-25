@@ -1,3 +1,9 @@
+
+html,body{
+  overflow-x: hidden;
+}
+
+
 :root {
     --text-dark: #000;
     --text-light: #fff;
@@ -202,6 +208,32 @@
     max-width: var(--standard-width);
     padding: 0 var(--spacing-md);
 }
+/* #gradient-canvas{
+  background-color: purple;
+  width: 200%;
+  height: 970px;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: -300px;
+  left: -50%;
+  z-index: -1;
+   --gradient-color-1:#ef0084; 
+  --gradient-color-2:#63c3f4;
+  --gradient-color-3:#7038ff;
+  --gradient-color-4:#ffba27; 
+} */
+
+.hero::before{
+  background-color: purple;
+  width: 100%;
+  height: 40%;
+content: "";
+position: absolute;
+transform: skewY(-5deg);
+top: -9%;
+z-index: -1;
+}
+
 .menu{
     display: flex;
     list-style: none;
@@ -330,6 +362,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    /* z-index: 4; */
 }
 .graphicGrid{
     display: grid;
@@ -393,6 +426,12 @@ box-shadow: var(--standard-box-shadow);
     flex-direction: row;
     justify-content: center;
     position: relative;
+    margin:  80px 0 50px 0;
+    z-index: 2;
+}
+.integrationSection .twoColumn{
+    margin:  80px 0 50px 0;
+
 }
 .integrationSection::before{
   content: "";
@@ -400,7 +439,8 @@ box-shadow: var(--standard-box-shadow);
     height: 1100px;
     background-color: var(--primary-accent);
    position: absolute;
-   z-index: 1;
+   z-index: -1;
+   transform: skewY(-10deg);
 }
 .integrationSection .primary-button{
    background-color: var(--blue-1);
@@ -421,6 +461,7 @@ box-shadow: var(--standard-box-shadow);
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 200px 0;
 }
 .whySwipe .secondary-text{
     color: var(--text-dark);
@@ -438,13 +479,25 @@ box-shadow: var(--standard-box-shadow);
     position: absolute;
 }
 .global-section{
-    background-color: var(--primary-accent);
+    /* background-color: var(--primary-accent); */
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
-    /* margin: 20px; */
+
 }
+.global-section::before{
+  content: "";
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  background-color: var(--primary-accent);
+  z-index: -1;
+  top: -32px;
+  left: 0;
+  transform: skewY(-10deg);
+}
+
 .global-section .card{
     width: 25%;
     box-sizing: border-box;
@@ -466,6 +519,17 @@ box-shadow: var(--standard-box-shadow);
   display: flex;
   justify-content: center;
   padding: 128px 0;
+  z-index: 2;
+  margin-top: 50px;
+}
+.virtualEvent::before{
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 800px;
+  padding: 128px 0;
+  z-index: -1;
+  position: absolute;
 }
 .virtualEvent .primary-button{
 background-color: #6962f7;
@@ -477,6 +541,7 @@ background-color: #6962f7;
   box-shadow: var(--standard-box-shadow);
   border-radius: 20px;
   overflow: hidden;
+  margin-left: 20px;
   
 }
 
